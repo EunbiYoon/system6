@@ -408,6 +408,7 @@ body{
   margin:auto;
   border:3px solid rgb(129, 253, 211);
   border-radius: 15px;
+  padding:10px;
 }
 .detail-graph{
   grid-row:1;
