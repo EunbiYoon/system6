@@ -1,0 +1,160 @@
+{
+    "January 5th Week":{
+        "DR":{
+
+        },
+        "FL":{
+
+        },
+        "TL":{
+
+        }
+    },
+    "February 3rd Week":{
+        "DR":{
+
+        },
+        "FL":{
+
+        },
+        "TL":{
+
+        }
+    },
+    "February 4th Week":{
+        "DR":{
+        },
+        "FL":{
+            "columns": ["index", "Parent Item", "Child Item", "Description", "match", "Feb W3_price", "Feb W4_price", "price_difference"],
+            "rows":[
+            {"index":"1","values":["F3U8CNU3W.ABWEUUS", "EBR89581145", "PCB Assembly,Complex", "Price Change", -2.5, -2.3, 0.1]},
+            {"index":"2","values":["ACQ86788873", "MEB64494404", "Handle", "Price Change", -0.1, 0.0, 0.1]},
+            {"index":"3","values":["ACQ86788873", "AEJ74840004", "Holder Assembly", "Price Change", -0.1, -0.2, -0.1]},
+            {"index":"4","values":["F3U8CNU3W.ABWEUUS", "AEM74772903", "Hose Assembly,Drain", "Price Change", -0.1, -0.1, -0.1]},
+            {"index":"5","values":["AJQ74874106", "MJT63283301", "Tub,Drum(Rear)", "Price Change", -0.2, -0.4, -0.2]},
+            {"index":"6","values":["AJQ74873806", "MAG64124301", "Balance Weight", "Price Change", 0.0, -0.2, -0.2]},
+            {"index":"7","values":["AJQ74873806", "MAG64124201", "Balance Weight", "Price Change", 0.0, -0.2, -0.2]},
+            {"index":"8","values":["AJQ74874106", "MJT63283101", "Tub,Drum(Front)", "Price Change", -0.1, -0.3, -0.2]}
+            ]
+        },
+        "TL":{
+
+        }
+    },
+    "March 2nd Week":{
+        "DR":{
+
+        },
+        "FL":{
+
+        },
+        "TL":{
+
+        }
+    },
+    "March 3rd Week":{
+        "DR":{
+
+        },
+        "FL":{
+            "columns": ["index", "NPT Seq", "NPT Level", "NPT Parent", "NPT Child", "NPT Desc", "NPT Qty", "NPT Price", "match", "price match", "GERP Seq", "GERP Level", "GERP Parent", "GERP Child", "GERP Desc", "GERP Qty", "GERP Price"],
+            "rows":[
+            {"index":"1","values":[4, 4, "MBH64722501", "RAA30152660", "Sheet,Steel(PCM)", 1, 18.1, "Price Change", -2.62058941, 31, 1, "F3U8CNU3W.ABWEUUS", "RAA30152660", "Sheet,Steel(PCM)", 1.0, 15.5]},
+            {"index":"2","values":[43, 2, "F3U8CNU3W.ABWEUUS", "EBR89581145", "PCB Assembly,Complex", 1, 34.8, "Price Change", -2.51414941, 199, 1, "F3U8CNU3W.ABWEUUS", "EBR89581145", "PCB Assembly,Complex", 1.0, 
+            32.3]},
+            {"index":"3","values":[188, 6, "MJT63283001", "MEK64186901", "Housing,Bearing Drum", 1, 16.7, "Substitute", 1.09353527, 126, 3, "MJT63283001", "MEK64186904", "Housing,Bearing Drum", 0.5, 19.0]},       
+            {"index":"4","values":[234, 3, "AJQ74873806", "MAG64124201", "Balance Weight", 1, 5.6, "Substitute", 1.07705934, 145, 2, "AJQ74873806", "MAG63602802", "Balance Weight", 0.2, 11.3]},
+            {"index":"5","values":[235, 3, "AJQ74873806", "MAG64124301", "Balance Weight", 1, 5.6, "Substitute", 4.99989558, 143, 2, "AJQ74873806", "MAG63602902", "Balance Weight", 0.9, 11.3]},
+            {"index":"6","values":[293, 4, "MCK58110508", "RAA34396956", "Sheet,Steel(PCM)", 1, 8.2, "Price Change", -1.19439111, 60, 3, "MCK58110508", "RAA34396956", "Sheet,Steel(PCM)", 1.0, 7.0]}
+            ]
+        },
+        "TL":{
+
+        }
+    },
+    "March 4th Week":{
+        "DR":{
+
+        },
+        "FL":{
+            "columns": ["index", "NPT Seq", "NPT Level", "NPT Parent", "NPT Child", "NPT Desc", "NPT Qty", "NPT Price", "match", "price match", "GERP Seq", "GERP Level", "GERP Parent", "GERP Child", "GERP Desc", "GERP Qty", "GERP Price"],
+            "rows":[
+            {"index":"1","values":[235, 3, "AJQ74873806", "MAG64124301", "Balance Weight", 1, 5.6, "Substitute", 5.0, 143, 2, "AJQ74873806", "MAG63602902", "Balance Weight", 0.9, 11.3]},
+            {"index":"2","values":[4, 4, "MBH64722501", "RAA30152660", "Sheet,Steel(PCM)", 1, 18.1, "Price Change", -2.6, 31, 1, "F3U8CNU3W.ABWEUUS", "RAA30152660", "Sheet,Steel(PCM)", 1.0, 15.5]},
+            {"index":"3","values":[43, 2, "F3U8CNU3W.ABWEUUS", "EBR89581145", "PCB Assembly,Complex", 1, 34.8, "Price Change", -2.5, 199, 1, "F3U8CNU3W.ABWEUUS", "EBR89581145", "PCB Assembly,Complex", 1.0, 32.3]},{"index":"4","values":[293, 4, "MCK58110508", "RAA34396956", "Sheet,Steel(PCM)", 1, 8.2, "Price Change", -1.2, 60, 3, "MCK58110508", "RAA34396956", "Sheet,Steel(PCM)", 1.0, 7.0]},
+            {"index":"5","values":[188, 6, "MJT63283001", "MEK64186901", "Housing,Bearing Drum", 1, 16.7, "Substitute", 1.1, 126, 3, "MJT63283001", "MEK64186904", "Housing,Bearing Drum", 0.5, 19.0]},
+            {"index":"6","values":[234, 3, "AJQ74873806", "MAG64124201", "Balance Weight", 1, 5.6, "Substitute", 1.1, 145, 2, "AJQ74873806", "MAG63602802", "Balance Weight", 0.2, 11.3]}
+            ]
+        },
+        "TL":{
+
+        }
+    },
+    "March 5th Week":{
+        "DR":{
+
+        },
+        "FL":{
+
+        },
+        "TL":{
+
+        }
+    },
+    "April 2nd Week":{
+        "DR":{
+
+        },
+        "FL":{
+            "columns": ["index", "NPT Seq", "NPT Level", "NPT Parent", "NPT Child", "NPT Desc", "NPT Qty", "NPT Price", "match", "price match", "GERP Seq", "GERP Level", "GERP Parent", "GERP Child", "GERP Desc", "GERP Qty", "GERP Price"],
+            "rows":[
+            {"index":"1","values":[4, 4, "MBH64722501", "RAA30152660", "Sheet,Steel(PCM)", 1.0, 18.1, "Price Change", -1.5, 31, 1, "F3U8CNU3W.ABWEUUS", "RAA30152660", "Sheet,Steel(PCM)", 0.5, 15.2]},
+            {"index":"2","values":[43, 2, "F3U8CNU3W.ABWEUUS", "EBR89581145", "PCB Assembly,Complex", 1.0, 35.7, "Price Change", -1.6, 191, 1, "F3U8CNU3W.ABWEUUS", "EBR89581145", "PCB Assembly,Complex", 1.0, 34.1]},
+            {"index":"3","values":[198, 6, "MJT63283204", "RAA35316906", "Coil,Steel(STS)", 3.3, 3.6, "Substitute", 0.8, 137, 4, "MJT63283204", "RAA35316926", "Coil,Steel(STS)", 1.7, 4]},
+            {"index":"4","values":[203, 5, "AJQ74874106", "MHW62441201", "Spider", 1.0, 21.1, "Substitute", 0.6, 139, 3, "AJQ74874106", "MHW62441205", "Spider", 0.4, 22.7]},
+            {"index":"5","values":[240, 4, "EAU64683301", "AJB76315013", "Stator Assembly,Combined", 1.0, 10.1, "Price Change", 1.5, 144, 2, "AJQ74873806", "AJB76315013", "Stator Assembly,Combined", 1.0, 11.5]},  
+            {"index":"6","values":[242, 4, "EAU64683301", "AHL76195104", "Rotor Assembly,Combined", 1.0, 6.9, "Price Change", 0.9, 145, 2, "AJQ74873806", "AHL76195104", "Rotor Assembly,Combined", 1.0, 7.8]}       
+            ]
+        },
+        "TL":{
+
+        }
+    },
+    "April 3rd Week":{
+        "DR":{
+
+        },
+        "FL":{
+            "columns": ["index", "NPT Seq", "NPT Level", "NPT Parent", "NPT Child", "NPT Desc", "NPT Qty", "NPT Price", "match", "price match", "GERP Seq", "GERP Level", "GERP Parent", "GERP Child", "GERP Desc", "GERP Qty", "GERP Price"],
+            "rows":[
+            {"index":"1","values":[4, 4, "MBH64722501", "RAA30152660", "Sheet,Steel(PCM)", 1.0, 18.1, "Price Change", -2.01902739, 31, 1, "F3U8CNU3W.ABWEUUS", "RAA30152660", "Sheet,Steel(PCM)", 0.7, 15.2]},       
+            {"index":"2","values":[187, 6, "MJT63283001", "RAA00674203", "Resin,PP", 8.0, 1.3, "Price Change", 0.57704288, 124, 3, "MJT63283001", "RAA00674203", "Resin,PP", 8.0, 1.4]},
+            {"index":"3","values":[188, 6, "MJT63283001", "MEK64186901", "Housing,Bearing Drum", 1.0, 16.8, "Price Change", 0.31364856, 125, 3, "MJT63283001", "MEK64186901", "Housing,Bearing Drum", 1.0, 17.1]},   
+            {"index":"4","values":[198, 6, "MJT63283204", "RAA35316906", "Coil,Steel(STS)", 3.3, 3.6, "Substitute", 0.3660935832456997, 139, 4, "MJT63283204", "RAA35316926", "Coil,Steel(STS)", 0.8, 4.0]},
+            {"index":"5","values":[240, 4, "EAU64683301", "AJB76315013", "Stator Assembly,Combined", 1.0, 10.1, "Price Change", 1.45693704, 148, 2, "AJQ74873806", "AJB76315013", "Stator Assembly,Combined", 1.0, 11.5]},
+            {"index":"6","values":[242, 4, "EAU64683301", "AHL76195104", "Rotor Assembly,Combined", 1.0, 6.9, "Price Change", 0.90270435, 149, 2, "AJQ74873806", "AHL76195104", "Rotor Assembly,Combined", 1.0, 7.8]}]
+        },
+        "TL":{
+
+        }
+    },
+    "April 4th Week":{
+        "DR":{
+
+        },
+        "FL":{
+            "columns": ["index", "NPT Seq", "NPT Level", "NPT Parent", "NPT Child", "NPT Desc", "NPT Qty", "NPT Price", "match", "price match", "GERP Seq", "GERP Level", "GERP Parent", "GERP Child", "GERP Desc", "GERP Qty", "GERP Price"],
+            "rows":[
+            {"index":"1","values":[4, 4, "MBH64722501", "RAA30152660", "Sheet,Steel(PCM)", 1.0, 18.09, "Price Change", -2.1, 31, 1, "F3U8CNU3W.ABWEUUS", "RAA30152660", "Sheet,Steel(PCM)", 0.7, 15.2]},
+            {"index":"2","values":[187, 6, "MJT63283001", "RAA00674203", "Resin,PP", 8.0, 1.32467, "Price Change", 0.6, 125, 3, "MJT63283001", "RAA00674203", "Resin,PP", 8.0, 1.4]},
+            {"index":"3","values":[188, 6, "MJT63283001", "MEK64186901", "Housing,Bearing Drum", 1.0, 16.357, "Substitute", 1.1, 127, 3, "MJT63283001", "MEK64186904", "Housing,Bearing Drum", 0.4, 19.0]},
+            {"index":"4","values":[198, 6, "MJT63283204", "RAA35316906", "Coil,Steel(STS)", 3.3, 3.579, "Substitute", 1.2, 140, 4, "MJT63283204", "RAA35316912", "Coil,Steel(STS)", 2.6, 4.0]},
+            {"index":"5","values":[241, 4, "EAU64683301", "AJB76315013", "Stator Assembly,Combined", 1.0, 10.07, "Price Change", 1.5, 149, 2, "AJQ74873806", "AJB76315013", "Stator Assembly,Combined", 1.0, 11.5]}, 
+            {"index":"6","values":[243, 4, "EAU64683301", "AHL76195104", "Rotor Assembly,Combined", 1.0, 6.91, "Price Change", 0.9, 150, 2, "AJQ74873806", "AHL76195104", "Rotor Assembly,Combined", 1.0, 7.8]}      
+            ]
+        },
+        "TL":{
+
+        }
+    }
+}

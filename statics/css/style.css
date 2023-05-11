@@ -1,0 +1,553 @@
+/*templates grid*/
+body{
+  margin:auto;
+  font-family: 'Montserrat';
+  overflow-y: scroll;
+  /* background: linear-gradient(18deg, #ffffff, #a58fe9); */
+  min-height:100%;
+  display: flex;
+  flex-direction: column;
+}
+.top{
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  gap:30px;
+  height: 8vh;
+  margin: 30px 20px 20px;
+}
+.main{
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  height: 77vh;
+  gap:30px;
+  margin:auto 20px;
+}
+.sidebar{
+  grid-column: 1;
+}
+.container{
+  grid-column: 2;
+}
+.navigator{
+  grid-column: 3;
+}
+
+/*top container*/
+.top .container h1{
+  text-align:center;
+}
+
+
+/*top navigator*/
+.top .navigator p{
+  font-size: 1rem;
+  font-weight: 800;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.top .navigator .user-banner a{
+  background-color: aquamarine;
+  margin: 0 10px;
+  width:100px;
+  font-size:1.2rem;
+  margin-top:10px;
+  font-family:'Montserrat';
+  font-weight: 800;
+  color:black;
+  text-decoration: none;
+  padding:3px 15px;
+  border: 1px solid black;
+}
+.top .navigator .user-banner a:hover{
+  background-color: #17D4FE;
+  color:white;
+  cursor:pointer;
+}
+
+/* main container */
+.main .menu{
+  background-color: beige;
+  margin:10px 10px 50px 10px;
+  font-size:1.5rem;
+
+}
+
+.main .detail{
+  background-color: black;
+  color:white;
+  margin:5px;
+  text-align:center;
+}
+
+/*footer*/
+
+.footer{
+  margin-top:250px;
+  background-color:azure;
+  text-align: center;
+  position: bottom;
+}
+
+.footer h5{
+  font-size: 1rem;
+  text-align: center;
+  color:rgb(139, 139, 139);
+}
+.footer a{
+  text-decoration: none;
+  color:#1beabd
+}
+
+
+/*home.html*/
+.home-name{
+  text-align: center;
+  font-size: 3rem;
+}
+
+.home-history{
+  background-color:aliceblue;
+  text-align: center;
+  padding:30px;
+  border-radius:20px;
+  border:5px solid #10abff
+}
+.home-history .name{
+  font-size: 1.5rem;
+  font-weight: 1000;
+  background-color:#10abff;
+}
+.home-history a{
+  text-decoration:none;
+  font-weight: 800;
+  padding:10px 0;
+}
+.home-history a:hover{
+  background-color: #10abff;
+}
+.home-history .category{
+  font-size:1.2rem;
+  font-weight: 800;
+}
+.home-history .title{
+  font-size: 1.1rem;
+} 
+.home-history .time{
+  font-size:0.8rem;
+}
+
+
+.home-container{
+  width: 950px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 50px auto;
+  padding-top:50px;
+  /* background-color: grey; */
+  border-radius: 20px;
+}
+.home-container a{
+  text-decoration: none;
+  color:black;
+}
+.home-container .hexagonArea{
+  display: flex;
+}
+.home-container .hexagonArea.last{
+  transform: translateY(-45px);
+}
+.home-container .hexagonArea .hexagon{
+  position:relative;
+  width: 200px;
+  height: 250px;
+  margin:0 10px;
+  clip-path:polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+  background: deeppink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction:column;
+  cursor:pointer;
+  transition:.5s;
+}
+.home-container .hexagonArea .hexagon:hover{
+  background-color: deepskyblue;
+  transform: scale(0.8);
+  color:white;
+
+}
+.home-container .hexagonArea .hexagon img{
+  width: 80px;
+}
+.home-container .hexagonArea .hexagon h3{
+  /* text-transform: uppercase; */
+  font-weight: 800;
+  margin-top:10px;
+  font-size:17px;
+  letter-spacing: 1px;
+}
+.home-container .click{
+  background-color:deepskyblue;
+  align-items: right;
+}
+
+
+/*login.html*/
+.register-login-title{
+  background: linear-gradient(#10abff, #1beabd 5%, #10abff 40%);
+  background-clip: text;
+  background-color: #da1b60;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  animation: TransitioningBackground 2s linear infinite;
+  background-size: 100% 300%;
+  font-size: 3rem;
+}
+.register-login h1{
+  background: linear-gradient(#10abff, #1beabd 5%, #10abff 40%);
+  background-clip: text;
+  background-color: #da1b60;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  animation: TransitioningBackground 2s linear infinite;
+  background-size: 100% 300%;
+}
+@keyframes TransitioningBackground {
+  0% {
+      background-position: 100% 200%;
+  }
+  100% {
+      background-position: 100% -100%;
+  }
+}
+.register-login{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap:10px;
+  text-align: center;
+  margin-top:50px;
+}
+.register{
+  grid-column:1;
+}
+.login{
+  grid-column:2;
+}
+.register-login form{
+  background-color:azure;
+  border: #17D4FE 5px solid;
+}
+.register-login p{
+  color:red;
+  font-weight: 800;
+}
+.register-login label{
+  color:black;
+  font-size: 1rem;
+  font-weight: 600;
+  padding:0 30px;
+  text-align: center;
+}
+.register-login input{
+  text-align: center;
+  font-family: 'Montserrat';
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.register-login .submitbutton{
+  background-color: aquamarine;
+  color:black;
+  align-items: right;
+  font-size: 1.2rem;
+  padding:5px 10px;
+  font-family:'Montserrat';
+  font-weight: 600;
+  border-color: 1px solid #17D4FE;
+}
+.register-login .submitbutton:hover{
+  color:white;
+  cursor: pointer;
+  font-weight:600;
+  background-color:#17D4FE;
+}
+
+/*register*/
+.register .register-column{
+  margin:20px;
+}
+.register input{
+  width:350px;
+}
+.register button{
+  margin:20px 0;
+}
+.register form{
+  margin:30px 120px;
+}
+.register .button-box{
+  text-align: center;
+}
+
+/*login*/
+.register-login-title{
+  text-align: center;
+}
+.login form{
+  margin:0px 100px;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  gap: 10px;
+}
+.login .login-banner{
+  display: grid;
+  grid-column: 1;
+  grid-row: 1;
+  align-items: right;
+}
+.login .login-column{
+  margin: 20px 0;
+}
+.login button {
+  align-items: right;
+  grid-column: 2;
+  grid-row: 1;
+  width: 100%;
+  height: 100%;
+  border-top: transparent;
+  border-bottom: transparent;
+  border-right: transparent;
+  border-left: #17D4FE 5px solid;
+}
+
+/* detail.html - sidebar */
+.detail-title{
+  text-align: center;
+  border:aquamarine 5px dotted;
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
+.detail-title .title{
+  padding:10px;
+  font-weight: 800;
+  font-size: 1.2rem;
+  border-bottom:aquamarine 5px dotted;
+}
+
+.detail-title .model{
+  font-size: 1rem;
+  cursor:pointer;
+  padding:5px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.detail-title .model .model1, .model2,.model3{
+  border: 2px solid aquamarine;
+  margin: auto;
+  border-radius: 5px;
+}
+.detail-title .model .model1:hover, .model2:hover,.model3:hover{
+  font-weight: 1000;
+  background-color:rgb(0, 253, 169);
+  color:white;
+  cursor:pointer;
+}
+.detail-title .model .model1{
+  grid-column: 1;
+  margin:5px;
+}
+.detail-title .model .model2{
+  grid-column: 2;
+  margin:5px;
+}
+.detail-title .model .model3{
+  grid-column: 3;
+  margin:5px;
+}
+.detail-side{
+  text-align: center;
+  padding:3px 5px;
+  border: 5px dotted pink;
+  border-radius: 15px;
+}
+.detail-side .detail-menu{
+  border-bottom:  5px dotted pink;
+  padding:10px;
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+.detail-side a{
+  text-decoration: none;
+}
+.detail-side .detail-url{
+  color:black;
+  text-decoration: none;
+  margin:20px 5px;
+  padding:10px;
+}
+.detail-side .detail-url:hover{
+  color:white;
+  background-color:deeppink;
+  border-radius: 5px;
+  font-weight: 800;
+}
+
+/* detail.html - container */
+.detail-container{
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap:10px;
+  margin:auto;
+}
+.detail-graph{
+  grid-row:1;
+}
+.detail-trend{
+  grid-row:2;
+  margin:auto;
+}
+.detail-item {
+  grid-row:3;
+  margin:auto;
+}
+
+table, th, td {
+  border: 1px solid #96D4D4;
+  border-collapse: collapse;
+}
+
+/* detail.html - navigator */
+.detail-comment{
+  text-align: center;
+  border:5px dotted #10abff80;
+  border-radius: 15px;
+}
+.detail-comment .title{
+  margin:0 auto;
+  padding:10px;
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+.detail-comment .content{
+  text-transform: capitalize;
+  padding-top:10px;
+  border-top:5px dotted #10abff80;
+}
+.detail-comment textarea{
+  margin-top:10px;
+  width:90%;
+  height: 12vh;
+  border-radius: 15px;
+  border:3px solid #65c9ff;
+  font-size:0.9rem;
+  font-weight: 500;
+}
+.detail-comment textarea:hover{
+  color:black;
+  background-color: #bbe7ff;
+}
+.detail-individual{
+  border-radius:10px;
+  border:2px solid #10abff;
+  background-color: #bbe7ff;
+  text-align: left;
+}
+.detail-individual {
+  text-align: left;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding:5px 10px;
+  font-size: 0.9rem;
+}
+.detail-individual .right{
+  grid-column: 1;
+  grid-row: 1;
+}
+.detail-individual .left{
+  grid-column: 2;
+  grid-row: 1;
+  font-size: 0.7rem;
+  text-align: right;
+}
+.detail-individual .bottom{
+  grid-column: 1;
+  grid-row: 2;
+  font-size: 0.8rem;
+}
+.detail-individual-space{
+  color:white;
+  font-size: 0.5rem;
+}
+.detail-comment input{
+  padding:5px;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom:10px;
+  border:3px solid deepskyblue;
+  background-color:#10abff;
+  color:white;
+  border-radius: 5px;
+}
+.detail-comment input:hover{
+  color:#10abff;
+  background-color: white;
+  cursor:pointer;
+  font-weight: 600;
+}
+.detail-comment label{
+  display: none;
+}
+
+
+/* category.html - container */
+.category-title{
+  color:#F08080;
+  font-weight: 1000;
+  font-size:2.5rem;
+  text-align: center;
+}
+.category{
+  text-align: center;
+  margin-top:30px;
+}
+.category-name{
+  text-align: center;
+  font-size: 3rem;
+}
+.category a{
+  text-decoration:none;
+  margin-top: 50px;;
+}
+.category .category-detail{
+  background-color:aquamarine;
+  color:black;
+  margin: auto;
+  border:1px solid black;
+  width:30%;
+  margin:5px auto;
+  padding:10px;
+  font-size:1rem
+}
+.category .category-detail:hover{
+  background-color:deeppink;
+  color:white;
+  margin:10px auto;
+  border:3px solid black;
+  font-weight: 1000;
+}
+.category .category-detail .title{
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+
+
