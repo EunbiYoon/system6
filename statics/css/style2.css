@@ -132,6 +132,11 @@ body{
 }
 .home-history .report{
   background-color: antiquewhite;
+  color:black;
+}
+.home-history .report:hover{
+  background-color:plum;
+  color:purple;
 }
 .home-history .title{
   font-size: 1.1rem;
