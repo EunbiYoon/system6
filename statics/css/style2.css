@@ -130,6 +130,9 @@ body{
   font-size:1.2rem;
   font-weight: 800;
 }
+.home-history .report{
+  background-color: antiquewhite;
+}
 .home-history .title{
   font-size: 1.1rem;
 }
