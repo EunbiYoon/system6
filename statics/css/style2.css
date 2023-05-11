@@ -132,7 +132,7 @@ body{
 }
 .home-history .title{
   font-size: 1.1rem;
-} 
+}
 .home-history .time{
   font-size:0.8rem;
 }
@@ -406,22 +406,24 @@ body{
   grid-template-rows: 1fr 1fr 1fr;
   gap:10px;
   margin:auto;
+  border:3px solid rgb(129, 253, 211);
+  border-radius: 15px;
 }
 .detail-graph{
   grid-row:1;
 }
 .detail-trend{
   grid-row:2;
-  margin:auto;
 }
 .detail-item {
   grid-row:3;
-  margin:auto;
 }
 
 table, th, td {
   border: 1px solid #96D4D4;
   border-collapse: collapse;
+  font-size: 0.8rem;
+  text-align: center;
 }
 
 /* detail.html - navigator */

@@ -50,7 +50,7 @@
                         type:'line',
                         label:'vs BOM',
                         data:chartData,
-                        borderColor: 'aqua',
+                        borderColor: 'aquamarine',
                     },
                     {
                         type:'line',
@@ -62,7 +62,7 @@
                         type:'bar',
                         label:"PO Price Change",
                         data:chartData1,
-                        borderColor:'#4AABED',
+                        backgroundColor0:'grey',
                         bordreWidth:1
                     },
                     {
@@ -98,11 +98,11 @@
             };
             var chart=new Chart(document.getElementById('chart'), chartConfig);
         </script>
-    
+
         <!-- table 1 -->
         <div class="detail-trend">
             <h3>BOM Comparison Trend</h3>
-            <table>
+            <table align="left">
                 <thead>
                     <tr>
                     {% for column in trend_table_data.columns %}
@@ -122,10 +122,10 @@
                 </tbody>
             </table>
         </div>
-        <!-- table 1 -->
+        <!-- table 2 -->
         <div class="detail-item">
             <h3>NPT vs GERP Detail Worst Item</h3>
-            <table>
+            <table align="left">
                 <thead>
                     <tr>
                     {% for column in item_table_data.columns %}
@@ -160,7 +160,7 @@
                     <div class="right">{{comment.commenter_name}}</div>
                     <div class="left">{{comment.date_added|date:"m.d h:i" }}</div>
                     <div class="bottom">{{comment.comment_body}}</div>
-                </div>    
+                </div>
                 <div class="detail-individual-space"><small>e</small></div>
             {% endfor %}
             {% if user.is_authenticated %}
