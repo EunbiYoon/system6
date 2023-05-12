@@ -7,9 +7,11 @@
     <div class="detail-title">
         <div class="title">Choose Model</div>
         <div class="model">
-            <div class="model1">Dryer</div>
-            <div class="model2">Front Loader</div>
-            <div class="model3">Top Loader</div>
+            <form method="post" action="{% url 'detail_url' post_detail.slug post_detail.id %}">
+                {% csrf_token %}
+                <input type="submit" name="action" value="Dryer">
+                <input type="submit" name="action" value="Front Loader">
+                <input type="submit" name="action" value="Top Loader">
         </div>
     </div>
     <div class="detail-side">

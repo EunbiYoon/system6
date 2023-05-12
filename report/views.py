@@ -24,13 +24,21 @@ def detailView(request, slug, pk):
     new_comment=None
     if request.method == 'POST':
         comment_form = CommentForm(request.POST, instance=post)
-        if comment_form.is_valid():
-            name = request.user.username
-            body = comment_form.cleaned_data['comment_body']
-            new_comment = Comment(post=post, commenter_name=name, comment_body=body)
-            new_comment.save()
-        else:
-            print('form is invalid')    
+        action=request.POST.get('action')
+        if action=='Dryer':
+            model_input="DR"
+        if action=='Front Loader':
+            model_input="FL"
+        if action=='Top Loader':
+            model_input="TL"
+        if action=='Add Comment':
+            if comment_form.is_valid():
+                name = request.user.username
+                body = comment_form.cleaned_data['comment_body']
+                new_comment = Comment(post=post, commenter_name=name, comment_body=body)
+                new_comment.save()
+            else:
+                print('form is invalid')    
     else:
         comment_form = CommentForm()    
 
@@ -40,7 +48,7 @@ def detailView(request, slug, pk):
     graph_json_path=settings.STATICFILES_DIRS[0]+'/json/graph.json'
     with open(graph_json_path,'r') as f:
         data=json.load(f)
-    selected_graph=data[week_num]["FL"]
+    selected_graph=data[week_num][model_input]
     graph_column=selected_graph["columns"]
     graph_value=selected_graph["vs BOM"]
     graph_value1=selected_graph["PO Price Change"]
@@ -51,13 +59,13 @@ def detailView(request, slug, pk):
     table_json_path=settings.STATICFILES_DIRS[0]+'/json/table-trend.json'
     with open(table_json_path,'r') as f:
         json_trend=json.load(f)
-    trend_json=json_trend[week_num]["FL"]
+    trend_json=json_trend[week_num][model_input]
 
     #get table item json data
     table_json_path=settings.STATICFILES_DIRS[0]+'/json/table-item.json'
     with open(table_json_path,'r') as f:
         json_item=json.load(f)
-    item_json=json_item[week_num]["FL"]
+    item_json=json_item[week_num][model_input]
 
     context = {
         'post_detail':post,
