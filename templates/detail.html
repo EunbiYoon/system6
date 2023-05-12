@@ -9,9 +9,9 @@
         <div class="model">
             <form method="post" action="{% url 'detail_url' post_detail.slug post_detail.id %}">
                 {% csrf_token %}
-                <input type="submit" name="action" value="Dryer">
-                <input type="submit" name="action" value="Front Loader">
-                <input type="submit" name="action" value="Top Loader">
+                <input type="submit" name="action" value="Dryer" class="model1">
+                <input type="submit" name="action" value="Front Loader" class="model2">
+                <input type="submit" name="action" value="Top Loader" class="model3">
         </div>
     </div>
     <div class="detail-side">
