@@ -20,6 +20,7 @@ def detailView(request, slug, pk):
     #get the specific posts
     post = Post.objects.get(slug=slug, pk=pk)
  
+    model_input="DR"
     #comment function
     new_comment=None
     if request.method == 'POST':
@@ -27,11 +28,14 @@ def detailView(request, slug, pk):
         action=request.POST.get('action')
         if action=='Dryer':
             model_input="DR"
-        if action=='Front Loader':
+            print(model_input)
+        elif action=='Front Loader':
             model_input="FL"
-        if action=='Top Loader':
+            print(model_input)
+        elif action=='Top Loader':
             model_input="TL"
-        if action=='Add Comment':
+            print(model_input)
+        elif action=='Add Comment':
             if comment_form.is_valid():
                 name = request.user.username
                 body = comment_form.cleaned_data['comment_body']
@@ -88,6 +92,3 @@ def categoryView(request, slug):
         'category_pair':category
     }
     return render(request,'category.html', context)
-
-
-
