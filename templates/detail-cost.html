@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block title %}Report{% endblock %}
+{% block name %}{{ post_detail.category}} Dashboard on {{ post_detail.title }}{% endblock %}
+
+{% block sidebar %}
+    <div class="detail-title">
+        <div class="title">Choose Model</div>
+        <div class="model">
+            <form method="post" action="{% url 'detail_cost_url' post_detail.slug post_detail.id %}">
+                {% csrf_token %}
+                <input type="submit" name="action" value="Dryer" class="model1">
+                <input type="submit" name="action" value="Front Loader" class="model2">
+                <input type="submit" name="action" value="Top Loader" class="model3">
+        </div>
+    </div>
+    <div class="detail-side">
+        <div class="detail-menu">
+            Menu
+        </div>
+        <a href="{% url 'home_url' %}">
+            <div class="detail-url">Home</div>
+        </a>
+        <a href="{% url 'category_bom_url' 'bom-comparison' %}">
+            <div class="detail-url">BOM Comparison</div>
+        </a>
+        <a href="{% url 'category_cost_url' 'cost-review' %}">
+            <div class="detail-url">Cost Review</div>
+        </a>
+        <a href="#">
+            <div class="detail-url">VI Activity</div>
+        </a>
+    </div>
+{% endblock %}
+
+
+
+{% block navigator %}
+    <div class="detail-comment">
+        <div class="title">Comments</div>
+        <div class="content">
+            {% if not post_detail.comment_model.all %}
+                <p>No comments yet</p>
+            {% endif %}
+            {% for comment in post_detail.comment_model.all %}
+                <div class="detail-individual">
+                    <div class="right">{{comment.commenter_name}}</div>
+                    <div class="left">{{comment.date_added|date:"m.d h:i" }}</div>
+                    <div class="bottom">{{comment.comment_body}}</div>
+                </div>
+                <div class="detail-individual-space"><small>e</small></div>
+            {% endfor %}
+            {% if user.is_authenticated %}
+                <form method="post" action="{% url 'detail_cost_url' post_detail.slug post_detail.id %}">
+                    {% csrf_token %}
+                    {{ form_detail.as_table }}
+                    <input type="submit" value="Add Comment" name="action">
+                </form>
+            {% else %}
+                <form>
+                    if you want to remain comment, please login
+                </form>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

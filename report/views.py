@@ -5,18 +5,14 @@ import json
 from django.shortcuts import render
 from django.conf import settings
 
-def homeView(request):
+def home_view(request):
     posts = list(Post.objects.all())[-3:]
     context={
         'posts_set':posts,
     }
     return render(request, 'home.html', context)
 
-def post_titles(request):
-    titles=Post.objects.values_list('title', flat=True)
-    return render(request,titles)
-
-def detailView(request, slug, pk):
+def detail_bom_view(request, slug, pk):
     #get the specific posts
     post = Post.objects.get(slug=slug, pk=pk)
  
@@ -42,16 +38,15 @@ def detailView(request, slug, pk):
                 new_comment = Comment(post=post, commenter_name=name, comment_body=body)
                 new_comment.save()
                 #refresh the page and delete the text
-                return redirect('detail_url', slug=post.slug, pk=post.pk) 
+                return redirect('detail_bom_url', slug=post.slug, pk=post.pk) 
             else:
                 print('form is invalid')   
     else:
         comment_form = CommentForm()    
 
-
     #get graph json data
     week_num=post.title
-    graph_json_path=settings.STATICFILES_DIRS[0]+'/json/graph.json'
+    graph_json_path=settings.STATICFILES_DIRS[0]+'/json/bom-graph.json'
     with open(graph_json_path,'r') as f:
         data=json.load(f)
     selected_graph=data[week_num][model_input]
@@ -62,13 +57,13 @@ def detailView(request, slug, pk):
     graph_value3=selected_graph["PO + Substitute"]
 
     #get table trend json data
-    table_json_path=settings.STATICFILES_DIRS[0]+'/json/table-trend.json'
+    table_json_path=settings.STATICFILES_DIRS[0]+'/json/bom-table-trend.json'
     with open(table_json_path,'r') as f:
         json_trend=json.load(f)
     trend_json=json_trend[week_num][model_input]
 
     #get table item json data
-    table_json_path=settings.STATICFILES_DIRS[0]+'/json/table-item.json'
+    table_json_path=settings.STATICFILES_DIRS[0]+'/json/bom-table-item.json'
     with open(table_json_path,'r') as f:
         json_item=json.load(f)
     item_json=json_item[week_num][model_input]
@@ -85,12 +80,50 @@ def detailView(request, slug, pk):
         'trend_table_data':trend_json,
         'item_table_data':item_json,
     }
-    return render(request, 'detail.html', context)
+    return render(request, 'detail-bom.html', context)
 
+def detail_cost_view(request, slug, pk):
+    #get the specific posts
+    post = Post.objects.get(slug=slug, pk=pk)
+ 
+    #initial settings
+    new_comment=None
+    if request.method == 'POST':
+        action=request.POST.get('action')
+        if action == 'Add Comment':
+            comment_form = CommentForm(request.POST, instance=post)  # create new instance with required=False
+            if comment_form.is_valid():
+                name = request.user.username
+                body = comment_form.cleaned_data['comment_body']
+                new_comment = Comment(post=post, commenter_name=name, comment_body=body)
+                new_comment.save()
+                #refresh the page and delete the text
+                return redirect('detail_cost_url', slug=post.slug, pk=post.pk) 
+            else:
+                print('form is invalid')   
+    else:
+        comment_form = CommentForm()    
 
-def categoryView(request, slug):
-    category=Category.objects.get(slug=slug)
-    context={
-        'category_pair':category
+    context = {
+        'post_detail':post,
+        'new_comment': new_comment,
+        'form_detail':comment_form
     }
-    return render(request,'category.html', context)
+    return render(request, 'detail-cost.html', context)
+
+
+def category_bom_view(request, slug):
+    category=Category.objects.get(slug=slug)
+
+    context={
+        'category_pair':category,
+    }
+    return render(request,'category-bom.html', context)
+
+def category_cost_view(request, slug):
+    category=Category.objects.get(slug=slug)
+
+    context={
+        'category_pair':category,
+    }
+    return render(request,'category-cost.html', context)

@@ -10,23 +10,19 @@
 
 {% block container %}
     <div class="home-container">
-        <div class="home-menu1">
+        <div class="hexagonArea first">
             <a href="{% url 'category_bom_url' 'bom-comparison'%}">
                 <div class="hexagon">
                     <img src="https://img.icons8.com/wired/64/null/compare.png"/>
                     <h3>BOM Comparion</h3>
                 </div>
             </a>
-        </div>
-        <div class="home-menu2">
             <a href="{% url 'category_cost_url' 'cost-review'%}">
                 <div class="hexagon">
                     <img src="https://img.icons8.com/ios/50/null/combo-chart--v1.png"/>
                     <h3>Cost Review</h3>
                 </div>
             </a>
-        </div>
-        <div class="home-menu3">
             <a href="#">
                 <div class="hexagon">
                     <img src="https://img.icons8.com/wired/64/null/low-price.png"/>
@@ -34,6 +30,19 @@
                 </div>
             </a>
         </div>
+        <div class="hexagonArea last">
+            <div class="hexagon">
+                <img src="https://img.icons8.com/ios-filled/50/null/activity-history.png"/>
+                <h3>Report History</h3>
+            </div>
+            <div class="hexagon">
+                <img src="https://img.icons8.com/glyph-neue/64/null/comments--v1.png"/>
+                <h3>Comment History</h3>
+            </div>
+        </div>
+        <!-- <div class="click">
+            <img src="https://img.icons8.com/ios-filled/50/null/nui2.png"/>
+        </div> -->
     </div>
 {% endblock%}
 

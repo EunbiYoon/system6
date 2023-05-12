@@ -5,8 +5,11 @@
 
 {% block container %}
     <div class="category">
+        {% if category_match is "BOM" %}
+            {{category_pair.slug}}
+        {% endif %}
         {% for cat in category_pair.post_model.all %}
-            <a href="{% url 'detail_url' cat.slug cat.id%}">
+            <a href="{% url 'detail_cost_url' cat.slug cat.id%}">
                 <div class="category-detail">
                     <div class="title">{{ cat.title }} Report</div>
                     <div class="date">Updated on {{ cat.date_added|date:"Y.m.d" }}</div>

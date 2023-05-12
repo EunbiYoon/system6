@@ -101,108 +101,54 @@ body{
 
 
 /*home.html*/
+/*home.html - top container*/
 .home-name{
   text-align: center;
   font-size: 3rem;
 }
 
-.home-history{
-  background-color:aliceblue;
+/*home.html - main container*/
+.home-container{
+  margin:50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap:5px;
+  padding:5px;
   text-align: center;
-  padding:30px;
-  border-radius:20px;
-  border:5px solid #10abff
+  background-color:black;
+  height: 80%;
 }
-.home-history .name{
-  font-size: 1.5rem;
-  font-weight: 1000;
-  background-color:#10abff;
-}
-.home-history a{
-  text-decoration:none;
-  font-weight: 800;
-  padding:10px 0;
-}
-.home-history a:hover{
+.home-container .home-menu1{
+  grid-column:1;
   background-color: #10abff;
 }
-.home-history .category{
-  font-size:1.2rem;
-  font-weight: 800;
+.home-container .home-menu2{
+  grid-column: 2;
+  background-color: #1beabd;
 }
-.home-history .report{
-  background-color: antiquewhite;
-  color:black;
+.home-container .home-menu3{
+  grid-column: 3;
+  background-color:aqua;
 }
-.home-history .report:hover{
-  background-color:plum;
-  color:purple;
-}
-.home-history .title{
-  font-size: 1.1rem;
-}
-.home-history .time{
-  font-size:0.8rem;
-}
-
-
-.home-container{
-  width: 950px;
+.home-container .home-menu1, .home-menu2, .home-menu3{
+  width: 100%;
+  height: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  flex-wrap: wrap;
-  margin: 50px auto;
-  padding-top:50px;
-  /* background-color: grey; */
-  border-radius: 20px;
+}
+.home-container .home-menu1:hover, .home-menu2:hover, .home-menu3:hover{
+  background-color: black;
 }
 .home-container a{
+  font-size: 2rem;
   text-decoration: none;
   color:black;
+  margin:auto;
 }
-.home-container .hexagonArea{
-  display: flex;
+.home-container a:hover{
+  font-size: 2.5rem;
+  text-decoration: none;
+  color:pink;
 }
-.home-container .hexagonArea.last{
-  transform: translateY(-45px);
-}
-.home-container .hexagonArea .hexagon{
-  position:relative;
-  width: 200px;
-  height: 250px;
-  margin:0 10px;
-  clip-path:polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
-  background: deeppink;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction:column;
-  cursor:pointer;
-  transition:.5s;
-}
-.home-container .hexagonArea .hexagon:hover{
-  background-color: deepskyblue;
-  transform: scale(0.8);
-  color:white;
-
-}
-.home-container .hexagonArea .hexagon img{
-  width: 80px;
-}
-.home-container .hexagonArea .hexagon h3{
-  /* text-transform: uppercase; */
-  font-weight: 800;
-  margin-top:10px;
-  font-size:17px;
-  letter-spacing: 1px;
-}
-.home-container .click{
-  background-color:deepskyblue;
-  align-items: right;
-}
-
 
 /*login.html*/
 .register-login-title{
