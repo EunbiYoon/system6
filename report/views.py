@@ -41,7 +41,7 @@ def detailView(request, slug, pk):
                 body = comment_form.cleaned_data['comment_body']
                 new_comment = Comment(post=post, commenter_name=name, comment_body=body)
                 new_comment.save()
-                #refresh the page
+                #refresh the page and delete the text
                 return redirect('detail_url', slug=post.slug, pk=post.pk) 
             else:
                 print('form is invalid')   
