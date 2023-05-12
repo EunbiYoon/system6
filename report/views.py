@@ -25,7 +25,7 @@ def detailView(request, slug, pk):
     new_comment=None
     if request.method == 'POST':
         action=request.POST.get('action')
-        if action=='Dryer' or 'Front Loader' or 'Top Loader':
+        if action in ['Dryer', 'Front Loader', 'Top Loader']:
             if action=='Dryer':
                 model_input="DR"
             elif action=="Front Loader":
@@ -34,16 +34,15 @@ def detailView(request, slug, pk):
                 model_input="TL"
             comment_form = CommentForm()
 
-        elif action=='Add Comment':
-            print(action)
-            comment_form = CommentForm(request.POST, instance=post, required=False)
+        elif action == 'Add Comment':
+            comment_form = CommentForm(request.POST, instance=post)  # create new instance with required=False
             if comment_form.is_valid():
                 name = request.user.username
                 body = comment_form.cleaned_data['comment_body']
                 new_comment = Comment(post=post, commenter_name=name, comment_body=body)
                 new_comment.save()
             else:
-                print('form is invalid')      
+                print('form is invalid')   
     else:
         comment_form = CommentForm()    
 
