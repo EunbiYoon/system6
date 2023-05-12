@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Category, Post, Comment
 from .forms import CommentForm
 import json
@@ -41,6 +41,8 @@ def detailView(request, slug, pk):
                 body = comment_form.cleaned_data['comment_body']
                 new_comment = Comment(post=post, commenter_name=name, comment_body=body)
                 new_comment.save()
+                #refresh the page
+                return redirect('detail_url', slug=post.slug, pk=post.pk) 
             else:
                 print('form is invalid')   
     else:
