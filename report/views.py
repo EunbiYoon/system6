@@ -24,18 +24,19 @@ def detailView(request, slug, pk):
     #comment function
     new_comment=None
     if request.method == 'POST':
-        comment_form = CommentForm(request.POST, instance=post)
         action=request.POST.get('action')
-        if action=='Dryer':
-            model_input="DR"
-            print(model_input)
-        elif action=='Front Loader':
-            model_input="FL"
-            print(model_input)
-        elif action=='Top Loader':
-            model_input="TL"
-            print(model_input)
+        if action=='Dryer' or 'Front Loader' or 'Top Loader':
+            if action=='Dryer':
+                model_input="DR"
+            elif action=="Front Loader":
+                model_input="FL"
+            elif action=="Top Loader":
+                model_input="TL"
+            comment_form = CommentForm()
+
         elif action=='Add Comment':
+            print(action)
+            comment_form = CommentForm(request.POST, instance=post, required=False)
             if comment_form.is_valid():
                 name = request.user.username
                 body = comment_form.cleaned_data['comment_body']
