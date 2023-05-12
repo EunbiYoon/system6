@@ -20,8 +20,8 @@ def detailView(request, slug, pk):
     #get the specific posts
     post = Post.objects.get(slug=slug, pk=pk)
  
+    #initial settings
     model_input="DR"
-    #comment function
     new_comment=None
     if request.method == 'POST':
         action=request.POST.get('action')
@@ -43,7 +43,7 @@ def detailView(request, slug, pk):
                 new_comment = Comment(post=post, commenter_name=name, comment_body=body)
                 new_comment.save()
             else:
-                print('form is invalid')    
+                print('form is invalid')      
     else:
         comment_form = CommentForm()    
 
