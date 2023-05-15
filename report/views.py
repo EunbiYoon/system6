@@ -87,7 +87,9 @@ def detail_cost_view(request, slug, pk):
     post = Post.objects.get(slug=slug, pk=pk)
  
     #initial settings
+    model_input="DR"
     new_comment=None
+
     if request.method == 'POST':
         action=request.POST.get('action')
         if action == 'Add Comment':
@@ -104,11 +106,40 @@ def detail_cost_view(request, slug, pk):
     else:
         comment_form = CommentForm()    
 
+    
+    #get graph json data
+    week_num=post.title
+    graph_json_path=settings.STATICFILES_DIRS[0]+'/json/cost-graph.json'
+    with open(graph_json_path,'r') as f:
+        data=json.load(f)
+    selected_graph=data[week_num][model_input]
+    graph_column=selected_graph["columns"]
+    value1_column=selected_graph["value1"]
+    value2_column=selected_graph["value2"]
+
+    #get table trend json data
+    table_json_path=settings.STATICFILES_DIRS[0]+'/json/cost-table-trend.json'
+    with open(table_json_path,'r') as f:
+        json_trend=json.load(f)
+    trend_json=json_trend[week_num][model_input]
+
+    #get table item json data
+    table_json_path=settings.STATICFILES_DIRS[0]+'/json/cost-table-item.json'
+    with open(table_json_path,'r') as f:
+        json_item=json.load(f)
+    item_json=json_item[week_num][model_input]
+
     context = {
         'post_detail':post,
         'new_comment': new_comment,
-        'form_detail':comment_form
+        'form_detail':comment_form,
+        'graph_column':json.dumps(graph_column),
+        'graph_value1':json.dumps(value1_column),
+        'graph_value2':json.dumps(value2_column),
+        'trend_table_data':trend_json,
+        'item_table_data':item_json,
     }
+
     return render(request, 'detail-cost.html', context)
 
 

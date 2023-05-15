@@ -42,7 +42,98 @@
 {% endblock %}
 
 {% block container %}
-    <div class="detail-container" id="detail-cost-3"></div>
+    <div class="detail-container" id="detail-cost-3">
+        <!-- graph -->
+        <div class="detail-graph"><canvas width="90vw" height="17vh" id="chart"></canvas></div>
+        {% load static %}
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+            var chartColumn=JSON.parse('{{ graph_column |safe }}');
+            var chartData1=JSON.parse('{{graph_value1|safe}}');
+            var chartData2=JSON.parse('{{graph_value2|safe}}');
+            var chartConfig={
+                data:{
+                    labels:chartColumn,
+                    datasets:[{
+                        type:'line',
+                        label:'vs BOM',
+                        data:chartData1,
+                        borderColor: 'aquamarine',
+                    }
+                ]
+                },
+                options:{
+                    scales:{
+                        y:{
+                            beginAtZero:true
+                        }
+                    },
+                    plugins:{
+                        title:{
+                            display:true,
+                            text:'Trend Graph',
+                            font:{size:15,family: 'Montserrat'}
+                        },
+                        legend:{
+                            labels:{
+                                // usePointStyle: true,
+                                // pointStyle: 'line',
+                                // display:false,
+                                font:{size:12,family: 'Montserrat'}}
+                        }
+                    }
+                }
+            };
+            var chart=new Chart(document.getElementById('chart'), chartConfig);
+        </script>
+
+        <!-- table 1 -->
+        <div class="detail-trend">
+            <h3>Trend Table </h3>
+            <table align="left">
+                <thead>
+                    <tr>
+                    {% for column in trend_table_data.columns %}
+                        <th>{{ column }}</th>
+                    {% endfor %}
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    {% for row in trend_table_data.rows %}
+                    <tr>
+                        <th>{{ row.index }}</th>
+                        {% for value in row.values %}
+                        <td>{{ value }}</td>
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <!-- table 2 -->
+        <div class="detail-item">
+            <h3>Worst Item</h3>
+            <table align="left">
+                <thead>
+                    <tr>
+                    {% for column in item_table_data.columns %}
+                        <th>{{ column }}</th>
+                    {% endfor %}
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    {% for row in item_table_data.rows %}
+                    <tr>
+                        <th>{{ row.index }}</th>
+                        {% for value in row.values %}
+                        <td>{{ value }}</td>
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
 {% endblock %}
 
 {% block navigator %}
