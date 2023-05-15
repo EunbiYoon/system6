@@ -1,6 +1,37 @@
-{
-   "May 2nd Week":{
-        "DR":{
+{     
+    "May 2nd Week":{
+        "BPA-DR":{
+            "columns": ["Index", "", "Increase", "VI", "Month", "", "Decrease", "VI", "Month"],
+            "rows":[
+            {"index":"1","values":["", "Door,Glass", 0.022, "W18", "", "Door Assembly,Sub", -0.0678, "W19"]},
+            {"index":"2","values":["", "", "", "", "", "Gasket", -0.181, "W19"]}
+            ]
+        },
+        "BPA-FL":{
+            "columns": ["Index", "", "Increase", "VI", "Month", "", "Decrease", "VI", "Month"],
+            "rows":[
+            {"index":"1","values":["", "Resin,PP", 0.55, "W19", "", "Wrap", -0.03, "W18"]}
+            ]
+        },
+        "BPA-TL":{
+            "columns": ["Index", "", "Increase", "VI", "Month", "", "Decrease", "VI", "Month"],
+            "rows":[
+            {"index":"1","values":["", "Damper Assembly,Friction", 0.0069, "W18", "", "Lid Assembly", -0.09, "W19"]},
+            {"index":"2","values":["", "", "", "", "", "Resin,ASA(Chg_Qty)", -0.014, "W18"]}
+            ]
+        },
+        "PAC-DR":{
+            "columns": ["Index", "", "Increase", "VI", "Month", "", "Decrease", "VI", "Month"],
+            "rows":[
+            {"index":"nan","values":["", "Bracket,Hinge", 0.026, "W19", "", "Generator Assembly", -1.24, "W19"]},
+            {"index":"nan","values":["", "Door,Glass", 0.015, "W18", "", "Resin,EPS", -0.58, "W19"]},
+            {"index":"nan","values":["", "", "", "", "", "Parts Assembly,Motor", -2.0, "W19"]},
+            {"index":"nan","values":["", "", "", "", "", "Heater Assembly", -0.61, "W19"]},
+            {"index":"nan","values":["", "", "", "", "", "Sheet,Steel(Alcot)", -1.99, "W19"]},
+            {"index":"nan","values":["", "", "", "", "", "Belt,Poly V", -0.35, "W19"]}
+            ]
+        },
+        "PAC-FL":{
             "columns": ["Index", "", "Increase", "VI", "Month", "", "Decrease", "VI", "Month"],
             "rows":[
             {"index":"1","values":["", "Door,Glass", 0.02, "W18", "", "Stator Assembly,Combined", -2.79, "W9"]},
@@ -12,19 +43,14 @@
             {"index":"7","values":["", "", "", "", "", "Wrap", -0.03, "W18"]}
             ]
         },
-        "FL":{
-            "columns": ["index", "NPT Seq", "NPT Level", "NPT Parent", "NPT Child", "NPT Desc", "NPT Qty", "NPT Price", "match", "price match", "GERP Seq", "GERP Level", "GERP Parent", "GERP Child", "GERP Desc", "GERP Qty", "GERP Price"],
+        "PAC-TL":{
+            "columns": ["Index", "", "Increase", "VI", "Month", "", "Decrease", "VI", "Month"],
             "rows":[
-            {"index":"1","values":[4, 4, "MBH64722501", "RAA30152660", "Sheet,Steel(PCM)", 1.0, 18.09, "Price Change", -2.1, 31, 1, "F3U8CNU3W.ABWEUUS", "RAA30152660", "Sheet,Steel(PCM)", 0.7, 15.2]},
-            {"index":"2","values":[187, 6, "MJT63283001", "RAA00674203", "Resin,PP", 8.0, 1.32467, "Price Change", 0.6, 125, 3, "MJT63283001", "RAA00674203", "Resin,PP", 8.0, 1.4]},
-            {"index":"3","values":[188, 6, "MJT63283001", "MEK64186901", "Housing,Bearing Drum", 1.0, 16.357, "Substitute", 1.1, 127, 3, "MJT63283001", "MEK64186904", "Housing,Bearing Drum", 0.4, 19.0]},
-            {"index":"4","values":[198, 6, "MJT63283204", "RAA35316906", "Coil,Steel(STS)", 3.3, 3.579, "Substitute", 1.2, 140, 4, "MJT63283204", "RAA35316912", "Coil,Steel(STS)", 2.6, 4.0]},
-            {"index":"5","values":[241, 4, "EAU64683301", "AJB76315013", "Stator Assembly,Combined", 1.0, 10.07, "Price Change", 1.5, 149, 2, "AJQ74873806", "AJB76315013", "Stator Assembly,Combined", 1.0, 11.5]}, 
-            {"index":"6","values":[243, 4, "EAU64683301", "AHL76195104", "Rotor Assembly,Combined", 1.0, 6.91, "Price Change", 0.9, 150, 2, "AJQ74873806", "AHL76195104", "Rotor Assembly,Combined", 1.0, 7.8]}      
+            {"index":"nan","values":["", "Damper Assembly,Friction", 0.0069, "W18", "", "Resin,PP", -0.834, "W19"]},
+            {"index":"nan","values":["", "", "", "", "", "Sheet,Steel(PCM)", -2.38, "W19"]},
+            {"index":"nan","values":["", "", "", "", "", "Housing Assembly,Clutch Coupling", -1.44, "W19"]},
+            {"index":"nan","values":["", "", "", "", "", "Resin,ASA(Chg_Qty)", -0.014, "W18"]}
             ]
-        },
-        "TL":{
-
         }
     }
 }

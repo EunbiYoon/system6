@@ -87,12 +87,32 @@ def detail_cost_view(request, slug, pk):
     post = Post.objects.get(slug=slug, pk=pk)
  
     #initial settings
-    model_input="DR"
+    model_input="BPA-DR"
     new_comment=None
 
     if request.method == 'POST':
+        bpa=request.POST.get('bpa')
+        pac=request.POST.get('pac')
         action=request.POST.get('action')
-        if action == 'Add Comment':
+        if bpa in ['Dryer','Front Loader','Top Laoder']:
+            if action=="Dryer":
+                model_input="BPA-DR"
+            elif action=="Front Loader":
+                model_input="BPA-FL"
+            elif action=="Top Loader":
+                model_input="BPA-TL"
+            comment_form = CommentForm()
+
+        elif pac in ['Dryer','Front Loader','Top Laoder']:
+            if action=="Dryer":
+                model_input="BPA-DR"
+            elif action=="Front Loader":
+                model_input="BPA-FL"
+            elif action=="Top Loader":
+                model_input="BPA-TL"
+            comment_form = CommentForm()
+            
+        elif action == 'Add Comment':
             comment_form = CommentForm(request.POST, instance=post)  # create new instance with required=False
             if comment_form.is_valid():
                 name = request.user.username
@@ -100,11 +120,11 @@ def detail_cost_view(request, slug, pk):
                 new_comment = Comment(post=post, commenter_name=name, comment_body=body)
                 new_comment.save()
                 #refresh the page and delete the text
-                return redirect('detail_cost_url', slug=post.slug, pk=post.pk) 
+                return redirect('detail_bom_url', slug=post.slug, pk=post.pk) 
             else:
                 print('form is invalid')   
     else:
-        comment_form = CommentForm()    
+        comment_form = CommentForm() 
 
     
     #get graph json data

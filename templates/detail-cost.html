@@ -4,24 +4,38 @@
 {% block name %}{{ post_detail.category}} Dashboard on {{ post_detail.title }}{% endblock %}
 
 {% block sidebar %}
-<div class="detail-title" id="detail-cost-1">
-    <div class="title" id="detail-cost-2">Choose Model</div>
-    <form method="post" action="{% url 'detail_bom_url' post_detail.slug post_detail.id %}">
-        <div class="model">
-            {% csrf_token %}
-            <div class="model1">
-                <input type="submit" name="action" value="Dryer" id="detail-cost-model">
-            </div>
-            <div class="model2">
-                <input type="submit" name="action" value="Front Loader" id="detail-cost-model">
-            </div>
-            <div class="model3">
-                <input type="submit" name="action" value="Top Loader" id="detail-cost-model">
-            </div>
+<form method="post" action="{% url 'detail_bom_url' post_detail.slug post_detail.id %}" class="detail-title" id="detail-cost-1">
+    <div class="title" id="detail-cost-2">BPA Model</div>
+    <div class="model">
+        {% csrf_token %}
+        <div class="model1">
+            <input type="submit" name="bpa" value="Dryer" id="detail-cost-model">
         </div>
-    </form>
+        <div class="model2">
+            <input type="submit" name="bpa" value="Front Loader" id="detail-cost-model">
+        </div>
+        <div class="model3">
+            <input type="submit" name="bpa" value="Top Loader" id="detail-cost-model">
+        </div>
+    </div>
+</form>
+<form method="post" action="{% url 'detail_bom_url' post_detail.slug post_detail.id %}" class="detail-title" id="detail-cost-1">
+    <div class="title" id="detail-cost-2">PAC Model</div>
+    <div class="model">
+        {% csrf_token %}
+        <div class="model1">
+            <input type="submit" name="pac" value="Dryer" id="detail-cost-model">
+        </div>
+        <div class="model2">
+            <input type="submit" name="pac" value="Front Loader" id="detail-cost-model">
+        </div>
+        <div class="model3">
+            <input type="submit" name="pac" value="Top Loader" id="detail-cost-model">
+        </div>
+    </div>
+</form>
 
-</div>
+
 <div class="detail-side">
     <div class="detail-menu">
         Menu
