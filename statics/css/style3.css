@@ -485,10 +485,9 @@ table, th, td {
 }
 .category a{
   text-decoration:none;
-  margin-top: 50px;;
+  margin-top: 50px;
 }
 .category .category-detail{
-  background-color:aquamarine;
   color:black;
   margin: auto;
   border:1px solid black;
@@ -498,13 +497,22 @@ table, th, td {
   font-size:1rem
 }
 .category .category-detail:hover{
-  background-color:deeppink;
-  color:white;
+  filter:brightness(80%);
   margin:10px auto;
   border:3px solid black;
   font-weight: 1000;
 }
 .category .category-detail .title{
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 800;
+}
+.category .category-detail .date{
+  font-size:0.8rem;
+}
+
+#bom{
+  background-color: rgb(215, 222, 250);
+}
+#cost{
+  background-color:rgb(239, 215, 250);
 }
