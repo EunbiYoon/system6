@@ -1,7 +1,16 @@
 {
    "May 2nd Week":{
         "DR":{
-
+            "columns": ["Index", "", "Increase", "VI", "Month", "", "Decrease", "VI", "Month"],
+            "rows":[
+            {"index":"1","values":["", "Door,Glass", 0.02, "W18", "", "Stator Assembly,Combined", -2.79, "W9"]},
+            {"index":"2","values":["", "", "", "", "", "Rotor Assembly,Combined", -1.91, "W19"]},
+            {"index":"3","values":["", "", "", "", "", "Tub,Drum(Front)(Rear)", -0.49, "W19"]},
+            {"index":"4","values":["", "", "", "", "", "Bearing,Ball", -1.29, "W19"]},
+            {"index":"5","values":["", "", "", "", "", "Resin,EPS", -0.44, "W19"]},
+            {"index":"6","values":["", "", "", "", "", "Door,Glass", -0.16, "W19"]},
+            {"index":"7","values":["", "", "", "", "", "Wrap", -0.03, "W18"]}
+            ]
         },
         "FL":{
             "columns": ["index", "NPT Seq", "NPT Level", "NPT Parent", "NPT Child", "NPT Desc", "NPT Qty", "NPT Price", "match", "price match", "GERP Seq", "GERP Level", "GERP Parent", "GERP Child", "GERP Desc", "GERP Qty", "GERP Price"],
