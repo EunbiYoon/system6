@@ -12,26 +12,21 @@
             <input type="submit" name="action" value="BPA-Dryer" id="detail-cost-model">
         </div>
         <div class="model2">
-            <input type="submit" name="action" value="BPA-Front Loader" id="detail-cost-model">
-        </div>
-        <div class="model3">
-            <input type="submit" name="action" value="BPA-Top Loader" id="detail-cost-model">
-        </div>
-    </div>
-</form>
-<form method="post" action="{% url 'detail_cost_url' post_detail.slug post_detail.id %}" class="detail-title" id="detail-cost-1">
-    <div class="title" id="detail-cost-2">PAC Model</div>
-    <div class="model">
-        {% csrf_token %}
-        <div class="model1">
             <input type="submit" name="action" value="PAC-Dryer" id="detail-cost-model">
         </div>
-        <div class="model2">
+        <div class="model3">
+            <input type="submit" name="action" value="BPA-Front Loader" id="detail-cost-model">
+        </div>
+        <div class="model4">
             <input type="submit" name="action" value="PAC-Front Loader" id="detail-cost-model">
         </div>
-        <div class="model3">
+        <div class="model5">
+            <input type="submit" name="action" value="BPA-Top Loader" id="detail-cost-model">
+        </div>
+        <div class="model6">
             <input type="submit" name="action" value="PAC-Top Loader" id="detail-cost-model">
         </div>
+
     </div>
 </form>
 

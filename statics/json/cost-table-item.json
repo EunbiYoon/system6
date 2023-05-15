@@ -23,12 +23,12 @@
         "PAC-DR":{
             "columns": ["Index", "", "Increase", "VI", "Month", "", "Decrease", "VI", "Month"],
             "rows":[
-            {"index":"nan","values":["", "Bracket,Hinge", 0.026, "W19", "", "Generator Assembly", -1.24, "W19"]},
-            {"index":"nan","values":["", "Door,Glass", 0.015, "W18", "", "Resin,EPS", -0.58, "W19"]},
-            {"index":"nan","values":["", "", "", "", "", "Parts Assembly,Motor", -2.0, "W19"]},
-            {"index":"nan","values":["", "", "", "", "", "Heater Assembly", -0.61, "W19"]},
-            {"index":"nan","values":["", "", "", "", "", "Sheet,Steel(Alcot)", -1.99, "W19"]},
-            {"index":"nan","values":["", "", "", "", "", "Belt,Poly V", -0.35, "W19"]}
+            {"index":"1","values":["", "Bracket,Hinge", 0.026, "W19", "", "Generator Assembly", -1.24, "W19"]},
+            {"index":"2","values":["", "Door,Glass", 0.015, "W18", "", "Resin,EPS", -0.58, "W19"]},
+            {"index":"3","values":["", "", "", "", "", "Parts Assembly,Motor", -2.0, "W19"]},
+            {"index":"4","values":["", "", "", "", "", "Heater Assembly", -0.61, "W19"]},
+            {"index":"5","values":["", "", "", "", "", "Sheet,Steel(Alcot)", -1.99, "W19"]},
+            {"index":"6","values":["", "", "", "", "", "Belt,Poly V", -0.35, "W19"]}
             ]
         },
         "PAC-FL":{
@@ -46,10 +46,10 @@
         "PAC-TL":{
             "columns": ["Index", "", "Increase", "VI", "Month", "", "Decrease", "VI", "Month"],
             "rows":[
-            {"index":"nan","values":["", "Damper Assembly,Friction", 0.0069, "W18", "", "Resin,PP", -0.834, "W19"]},
-            {"index":"nan","values":["", "", "", "", "", "Sheet,Steel(PCM)", -2.38, "W19"]},
-            {"index":"nan","values":["", "", "", "", "", "Housing Assembly,Clutch Coupling", -1.44, "W19"]},
-            {"index":"nan","values":["", "", "", "", "", "Resin,ASA(Chg_Qty)", -0.014, "W18"]}
+            {"index":"1","values":["", "Damper Assembly,Friction", 0.0069, "W18", "", "Resin,PP", -0.834, "W19"]},
+            {"index":"2","values":["", "", "", "", "", "Sheet,Steel(PCM)", -2.38, "W19"]},
+            {"index":"3","values":["", "", "", "", "", "Housing Assembly,Clutch Coupling", -1.44, "W19"]},
+            {"index":"4","values":["", "", "", "", "", "Resin,ASA(Chg_Qty)", -0.014, "W18"]}
             ]
         }
     }
