@@ -9,32 +9,38 @@
 
 
 {% block container %}
-    <div class="home-container">
-        <div class="home-menu1">
-            <a href="{% url 'category_bom_url' 'bom-comparison'%}">
-                <div class="hexagon">
-                    <img src="https://img.icons8.com/wired/64/null/compare.png"/>
-                    <h3>BOM Comparion</h3>
-                </div>
-            </a>
+<div class="home-container">
+    <a href="{% url 'category_bom_url' 'bom-comparison'%}" class="home-menu1">
+        <div class="home-menu">
+            <div class="home-image">
+                <img src="https://img.icons8.com/wired/64/null/compare.png"/>
+            </div>
+            <div class="home-text">
+                <h3>BOM Comparion</h3>
+            </div>
         </div>
-        <div class="home-menu2">
-            <a href="{% url 'category_cost_url' 'cost-review'%}">
-                <div class="hexagon">
-                    <img src="https://img.icons8.com/ios/50/null/combo-chart--v1.png"/>
-                    <h3>Cost Review</h3>
-                </div>
-            </a>
+    </a>
+    <a href="{% url 'category_cost_url' 'cost-review'%}" class="home-menu2">
+        <div class="home-menu">
+            <div class="home-image">
+                <img src="https://img.icons8.com/ios/50/null/combo-chart--v1.png"/>
+            </div>
+            <div class="home-text">
+                <h3>Cost Review</h3>
+            </div>
         </div>
-        <div class="home-menu3">
-            <a href="#">
-                <div class="hexagon">
-                    <img src="https://img.icons8.com/wired/64/null/low-price.png"/>
-                    <h3>VI Activity</h3>
-                </div>
-            </a>
+    </a>
+    <a href="#" class="home-menu3"> 
+        <div class="home-menu">
+            <div class="home-image">
+                <img src="https://img.icons8.com/wired/64/null/low-price.png"/>
+            </div>
+            <div class="home-text">
+                <h3>VI Activity</h3>
+            </div>
         </div>
-    </div>
+    </a>
+</div>
 {% endblock%}
 
 
