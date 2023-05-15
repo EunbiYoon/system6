@@ -317,7 +317,6 @@ body{
 .detail-title .model{
   font-size: 1rem;
   cursor:pointer;
-  margin:auto 5px;
   padding:10px;
   border-radius: 10px;
   display: grid;
@@ -349,7 +348,13 @@ body{
   font-weight: 800;
 }
 #detail-bom-model:hover{
-  background-color:blueviolet;
+  background-color:rgb(80, 43, 226);
+}
+#detail-cost-model:hover{
+  background-color:#bc13fe;
+}
+#detail-vi-model:hover{
+  background-color:#bc13fe;
 }
 
 /*menu*/
