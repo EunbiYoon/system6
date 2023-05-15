@@ -4,7 +4,7 @@
 {% block name %}{{ post_detail.category}} Dashboard on {{ post_detail.title }}{% endblock %}
 
 {% block sidebar %}
-<form method="post" action="{% url 'detail_bom_url' post_detail.slug post_detail.id %}" class="detail-title" id="detail-cost-1">
+<form method="post" action="{% url 'detail_cost_url' post_detail.slug post_detail.id %}" class="detail-title" id="detail-cost-1">
     <div class="title" id="detail-cost-2">BPA Model</div>
     <div class="model">
         {% csrf_token %}
@@ -19,7 +19,7 @@
         </div>
     </div>
 </form>
-<form method="post" action="{% url 'detail_bom_url' post_detail.slug post_detail.id %}" class="detail-title" id="detail-cost-1">
+<form method="post" action="{% url 'detail_cost_url' post_detail.slug post_detail.id %}" class="detail-title" id="detail-cost-1">
     <div class="title" id="detail-cost-2">PAC Model</div>
     <div class="model">
         {% csrf_token %}

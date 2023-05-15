@@ -111,7 +111,7 @@ def detail_cost_view(request, slug, pk):
             elif action=="Top Loader":
                 model_input="BPA-TL"
             comment_form = CommentForm()
-            
+
         elif action == 'Add Comment':
             comment_form = CommentForm(request.POST, instance=post)  # create new instance with required=False
             if comment_form.is_valid():
