@@ -287,48 +287,72 @@ body{
 /* detail.html - sidebar */
 .detail-title{
   text-align: center;
-  border:aquamarine 5px dotted;
   border-radius: 15px;
   margin-bottom: 30px;
+}
+#detail-bom-1{
+  border:rgb(215, 222, 250) 5px dotted;
+}
+#detail-cost-1{
+  border:rgb(239, 215, 250) 5px dotted;
+}
+#detail-vi-1{
+  border:rgb(215, 250, 244) 5px dotted;
 }
 .detail-title .title{
   padding:10px;
   font-weight: 800;
   font-size: 1.2rem;
-  border-bottom:aquamarine 5px dotted;
+}
+#detail-bom-2{
+  border-bottom:rgb(215, 222, 250) 5px dotted;
+}
+#detail-cost-2{
+  border-bottom:rgb(239, 215, 250) 5px dotted;
+}
+#detail-vi-2{
+  border-bottom:rgb(215, 250, 244) 5px dotted;
 }
 
 .detail-title .model{
   font-size: 1rem;
   cursor:pointer;
-  padding:5px;
+  margin:auto 5px;
+  padding:10px;
   border-radius: 10px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  text-align: center;
 }
-.detail-title .model .model1, .model2,.model3{
-  border: 2px solid aquamarine;
-  margin: auto;
-  border-radius: 5px;
-}
-.detail-title .model .model1:hover, .model2:hover,.model3:hover{
-  font-weight: 1000;
-  background-color:rgb(0, 253, 169);
-  color:white;
-  cursor:pointer;
-}
+
 .detail-title .model .model1{
-  grid-column: 1;
-  margin:5px;
+  grid-row: 1;
 }
 .detail-title .model .model2{
-  grid-column: 2;
-  margin:5px;
+  grid-row: 2;
 }
 .detail-title .model .model3{
-  grid-column: 3;
-  margin:5px;
+  grid-row: 3;
 }
+.detail-title .model input{
+  width: 100%;
+  font-size: 1rem;
+  background-color: #ffffff;
+  border: #ffffff;
+  font-family: 'Montserrat';
+  padding:10px;
+}
+.detail-title .model input:hover{
+  color:white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: 800;
+}
+#detail-bom-model:hover{
+  background-color:blueviolet;
+}
+
+/*menu*/
 .detail-side{
   text-align: center;
   padding:3px 5px;
@@ -363,9 +387,17 @@ body{
   grid-template-rows: 1fr 1fr 1fr;
   gap:10px;
   margin:auto;
-  border:3px solid rgb(129, 253, 211);
   border-radius: 15px;
   padding:10px;
+}
+#detail-bom-3{
+  border:3px solid rgb(215, 222, 250);
+}
+#detail-cost-3{
+  border:3px solid rgb(239, 215, 250);
+}
+#detail-vi-3{
+  border:3px solid rgb(215, 250, 244);
 }
 .detail-graph{
   grid-row:1;
@@ -466,6 +498,7 @@ table, th, td {
 .detail-comment label{
   display: none;
 }
+
 
 
 /* category.html - container */

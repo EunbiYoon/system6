@@ -4,15 +4,23 @@
 {% block name %}{{ post_detail.category}} Dashboard on {{ post_detail.title }}{% endblock %}
 
 {% block sidebar %}
-    <div class="detail-title">
-        <div class="title">Choose Model</div>
-        <div class="model">
-            <form method="post" action="{% url 'detail_bom_url' post_detail.slug post_detail.id %}">
+    <div class="detail-title" id="detail-bom-1">
+        <div class="title" id="detail-bom-2">Choose Model</div>
+        <form method="post" action="{% url 'detail_bom_url' post_detail.slug post_detail.id %}">
+            <div class="model">
                 {% csrf_token %}
-                <input type="submit" name="action" value="Dryer" class="model1">
-                <input type="submit" name="action" value="Front Loader" class="model2">
-                <input type="submit" name="action" value="Top Loader" class="model3">
-        </div>
+                <div class="model1">
+                    <input type="submit" name="action" value="Dryer" id="detail-bom-model">
+                </div>
+                <div class="model2">
+                    <input type="submit" name="action" value="Front Loader" id="detail-bom-model">
+                </div>
+                <div class="model3">
+                    <input type="submit" name="action" value="Top Loader" id="detail-bom-model">
+                </div>
+            </div>
+        </form>
+
     </div>
     <div class="detail-side">
         <div class="detail-menu">
@@ -34,7 +42,7 @@
 {% endblock %}
 
 {% block container %}
-    <div class="detail-container">
+    <div class="detail-container" id="detail-bom-3">
         <!-- graph -->
         <div class="detail-graph"><canvas width="90vw" height="17vh" id="chart"></canvas></div>
         {% load static %}
