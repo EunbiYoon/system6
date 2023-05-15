@@ -4,33 +4,41 @@
 {% block name %}{{ post_detail.category}} Dashboard on {{ post_detail.title }}{% endblock %}
 
 {% block sidebar %}
-    <div class="detail-title" id="detail-cost-1">
-        <div class="title" id="detail-cost-2">Choose Model</div>
+<div class="detail-title" id="detail-cost-1">
+    <div class="title" id="detail-cost-2">Choose Model</div>
+    <form method="post" action="{% url 'detail_bom_url' post_detail.slug post_detail.id %}">
         <div class="model">
-            <form method="post" action="{% url 'detail_cost_url' post_detail.slug post_detail.id %}">
-                {% csrf_token %}
-                <input type="submit" name="action" value="Dryer" class="model1">
-                <input type="submit" name="action" value="Front Loader" class="model2">
-                <input type="submit" name="action" value="Top Loader" class="model3">
+            {% csrf_token %}
+            <div class="model1">
+                <input type="submit" name="action" value="Dryer" id="detail-cost-model">
+            </div>
+            <div class="model2">
+                <input type="submit" name="action" value="Front Loader" id="detail-cost-model">
+            </div>
+            <div class="model3">
+                <input type="submit" name="action" value="Top Loader" id="detail-cost-model">
+            </div>
         </div>
+    </form>
+
+</div>
+<div class="detail-side">
+    <div class="detail-menu">
+        Menu
     </div>
-    <div class="detail-side">
-        <div class="detail-menu">
-            Menu
-        </div>
-        <a href="{% url 'home_url' %}">
-            <div class="detail-url">Home</div>
-        </a>
-        <a href="{% url 'category_bom_url' 'bom-comparison' %}">
-            <div class="detail-url">BOM Comparison</div>
-        </a>
-        <a href="{% url 'category_cost_url' 'cost-review' %}">
-            <div class="detail-url">Cost Review</div>
-        </a>
-        <a href="#">
-            <div class="detail-url">VI Activity</div>
-        </a>
-    </div>
+    <a href="{% url 'home_url' %}">
+        <div class="detail-url">Home</div>
+    </a>
+    <a href="{% url 'category_bom_url' 'bom-comparison' %}">
+        <div class="detail-url">BOM Comparison</div>
+    </a>
+    <a href="{% url 'category_cost_url' 'cost-review' %}">
+        <div class="detail-url">Cost Review</div>
+    </a>
+    <a href="#">
+        <div class="detail-url">VI Activity</div>
+    </a>
+</div>
 {% endblock %}
 
 {% block container %}
