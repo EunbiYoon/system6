@@ -114,7 +114,7 @@ def detail_cost_view(request, slug, pk):
                 new_comment = Comment(post=post, commenter_name=name, comment_body=body)
                 new_comment.save()
                 #refresh the page and delete the text
-                return redirect('detail_bom_url', slug=post.slug, pk=post.pk) 
+                return redirect('detail_cost_url', slug=post.slug, pk=post.pk) 
             else:
                 print('form is invalid')   
     else:
