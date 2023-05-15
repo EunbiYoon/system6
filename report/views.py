@@ -89,27 +89,21 @@ def detail_cost_view(request, slug, pk):
     #initial settings
     model_input="BPA-DR"
     new_comment=None
-
     if request.method == 'POST':
-        bpa=request.POST.get('bpa')
-        pac=request.POST.get('pac')
         action=request.POST.get('action')
-        if bpa in ['Dryer','Front Loader','Top Laoder']:
-            if action=="Dryer":
+        if action in ['BPA-Dryer', 'BPA-Front Loader', 'BPA-Top Loader', 'PAC-Dryer', 'PAC-Front Loader', 'PAC-Top Loader']:
+            if action=='BPA-Dryer':
                 model_input="BPA-DR"
-            elif action=="Front Loader":
+            elif action=="BPA-Front Loader":
                 model_input="BPA-FL"
-            elif action=="Top Loader":
+            elif action=="BPA-Top Loader":
                 model_input="BPA-TL"
-            comment_form = CommentForm()
-
-        elif pac in ['Dryer','Front Loader','Top Laoder']:
-            if action=="Dryer":
-                model_input="BPA-DR"
-            elif action=="Front Loader":
-                model_input="BPA-FL"
-            elif action=="Top Loader":
-                model_input="BPA-TL"
+            elif action=='PAC-Dryer':
+                model_input="PAC-DR"
+            elif action=="PAC-Front Loader":
+                model_input="PAC-FL"
+            elif action=="PAC-Top Loader":
+                model_input="PAC-TL"
             comment_form = CommentForm()
 
         elif action == 'Add Comment':
@@ -124,7 +118,7 @@ def detail_cost_view(request, slug, pk):
             else:
                 print('form is invalid')   
     else:
-        comment_form = CommentForm() 
+        comment_form = CommentForm()  
 
     
     #get graph json data

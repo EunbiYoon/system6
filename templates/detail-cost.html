@@ -9,13 +9,13 @@
     <div class="model">
         {% csrf_token %}
         <div class="model1">
-            <input type="submit" name="bpa" value="Dryer" id="detail-cost-model">
+            <input type="submit" name="action" value="BPA-Dryer" id="detail-cost-model">
         </div>
         <div class="model2">
-            <input type="submit" name="bpa" value="Front Loader" id="detail-cost-model">
+            <input type="submit" name="action" value="BPA-Front Loader" id="detail-cost-model">
         </div>
         <div class="model3">
-            <input type="submit" name="bpa" value="Top Loader" id="detail-cost-model">
+            <input type="submit" name="action" value="BPA-Top Loader" id="detail-cost-model">
         </div>
     </div>
 </form>
@@ -24,13 +24,13 @@
     <div class="model">
         {% csrf_token %}
         <div class="model1">
-            <input type="submit" name="pac" value="Dryer" id="detail-cost-model">
+            <input type="submit" name="action" value="PAC-Dryer" id="detail-cost-model">
         </div>
         <div class="model2">
-            <input type="submit" name="pac" value="Front Loader" id="detail-cost-model">
+            <input type="submit" name="action" value="PAC-Front Loader" id="detail-cost-model">
         </div>
         <div class="model3">
-            <input type="submit" name="pac" value="Top Loader" id="detail-cost-model">
+            <input type="submit" name="action" value="PAC-Top Loader" id="detail-cost-model">
         </div>
     </div>
 </form>
@@ -70,7 +70,7 @@
                     labels:chartColumn,
                     datasets:[{
                         type:'line',
-                        label:'vs BOM',
+                        label:'Victor2 Refresh Pro_WHT',
                         data:chartData1,
                         borderColor: 'aquamarine',
                     }
@@ -126,7 +126,7 @@
         </div>
         <!-- table 2 -->
         <div class="detail-item">
-            <h3>Worst Item</h3>
+            <h3>VI Item</h3>
             <table align="left">
                 <thead>
                     <tr>
